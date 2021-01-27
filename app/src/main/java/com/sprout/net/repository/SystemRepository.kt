@@ -22,18 +22,21 @@ class SystemRepository {
 
     }
 
-    //TODO 刷新token
-    suspend fun refreshToken() = withContext(Dispatchers.IO) {
-        serviceApi.refreshToken()
+
+    /**
+     * 获取频道数据接口 给VM调用
+     */
+    suspend fun getChannel() = withContext(Dispatchers.IO){
+        serviceApi.getChannel()
     }
 
 
-    //TODO 希望在协程里面进行 所以使用suspend修饰
+    suspend fun getBrand(page:Int,size:Int) = withContext(Dispatchers.IO){
+        serviceApi.getBrand(page,size)
+    }
 
-
-    //TODO 获取主页数据
-    suspend fun getHome() = withContext(Dispatchers.IO) {
-        serviceApi.getHome()
+    suspend fun getGood(page:Int,size:Int) = withContext(Dispatchers.IO){
+        serviceApi.getGood(page,size)
     }
 
 

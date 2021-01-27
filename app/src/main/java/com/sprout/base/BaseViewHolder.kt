@@ -1,4 +1,4 @@
-package com.example.myshop.base
+package com.sprout.base
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.MutableLiveData

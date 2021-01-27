@@ -1,4 +1,4 @@
-package com.shop.base
+package com.sprout.base
 
 import android.os.Bundle
 import android.widget.Toast
@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.kotlin.base.IView
+
 
 /**
  * baseactivity基类

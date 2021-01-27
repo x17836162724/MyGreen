@@ -1,4 +1,4 @@
-package com.example.myshop.base
+package com.sprout.base
 
 import android.content.Context
 import android.util.SparseArray
@@ -8,12 +8,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
+
 //TODO 1.上下文 2.集合 3.布局（也可能是多布局 所以使用轻量级集合） 4.点击事件 （多个点击）
 
 open abstract class BaseAdapter<D>
     (val context: Context, var list:List<D>,
      val layouts:SparseArray<Int>,
-     var itemClick:IItemClick<D>):RecyclerView.Adapter<BaseAdapter<D>.BaseVH>() {
+     var itemClick: IItemClick<D>
+):RecyclerView.Adapter<BaseAdapter<D>.BaseVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseVH {
         return BaseVH(DataBindingUtil.inflate(LayoutInflater.from(parent.context),viewType,parent,false))

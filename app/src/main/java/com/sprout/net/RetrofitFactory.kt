@@ -28,22 +28,22 @@ class RetrofitFactory {
     init {
         //通用拦截
         interceptor = Interceptor {
-            chain -> val request = chain.request()
-                .newBuilder()
-                .addHeader("charset","UTF-8")
-                .addHeader("token", MyMmkv.getString(Constants.token))
-                .build()
+                chain -> val request = chain.request()
+            .newBuilder()
+            .addHeader("charset","UTF-8")
+            .addHeader("token",MyMmkv.getString(Constants.token))
+            .build()
 
             chain.proceed(request)
         }
 
         //Retrofit实例化
         retrofit = Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(initClient())
-                .build()
+            .baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .client(initClient())
+            .build()
     }
 
     /*

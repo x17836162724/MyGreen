@@ -1,4 +1,4 @@
-package com.shop.base
+package com.sprout.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

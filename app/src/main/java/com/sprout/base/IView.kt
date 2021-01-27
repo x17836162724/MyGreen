@@ -1,5 +1,4 @@
-package com.example.kotlin.base
-
+package com.sprout.base
 interface IView {
     fun showLoading()
 
